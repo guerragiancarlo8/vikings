@@ -15,7 +15,6 @@ function viking(name, health, strength, warcry){
 		console.log(this.warcry);
 	}
 }
-
 function saxon(){
 
 	this.name = "sajón";
@@ -28,14 +27,12 @@ function saxon(){
 
 	}
 }
-
 function battle(array_of_saxons, array_of_vikings){
 
 	var battle = [array_of_saxons, array_of_vikings];
 	
 	turns = Math.floor(Math.random()*7) + 1;
 
-	console.log(turns)
 	while((turns > -1) && (array_of_saxons.length > 0) && (array_of_vikings.length > 0)){
 
 		var who_attacks = Math.floor(Math.random()*2);
@@ -92,16 +89,6 @@ function pit_fight(fighter1, fighter2, turns){
 		console.log(fighter2.name + " has satiated Odin and destroyed his opponent!")
 }
 
-function is_dead(array_of_players){
-
-	var deadPeople = array_of_players.filter(function(player){
-
-		return player.health > 0;
-
-	});
-	return deadPeople
-};
-
 vik = new viking('Ruben',100,10, "aroeipghaeriohgr");
 viko = new viking('Gian',70,11, "GRAAAAAHPIRHRG");
 viko2 = new viking('Davi',20,11, "AHIHOIHGRHPIOHWE");
@@ -116,7 +103,6 @@ pobre_diablo7 = new saxon();
 pobre_diablo8 = new saxon();
 pobre_diablo9 = new saxon();
 pobre_diablo10 = new saxon();
-//pit_fight(vik,viko,5);
 
 var viking_array = [vik,viko,viko2,viko3];
 var saxon_array = [pobre_diablo,pobre_diablo2,pobre_diablo8,pobre_diablo4,pobre_diablo10];
