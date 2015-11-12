@@ -41,6 +41,7 @@ function battle(array_of_saxons, array_of_vikings){
 
 		victim_position = Math.floor(Math.random()*battle[who_victim].length)
 		var unit_that_receives_capon = battle[who_victim][victim_position];
+		console.log(unit_that_attacks.name + " attacks "+unit_that_receives_capon.name+" !")
 		unit_that_attacks.attack(unit_that_receives_capon);
 		if(unit_that_receives_capon.health <= 0){
 
@@ -90,8 +91,8 @@ function pit_fight(fighter1, fighter2, turns){
 }
 
 vik = new viking('Ruben',100,10, "aroeipghaeriohgr");
-viko = new viking('Gian',70,11, "GRAAAAAHPIRHRG");
-viko2 = new viking('Davi',20,11, "AHIHOIHGRHPIOHWE");
+viko = new viking('Gian',70,10, "GRAAAAAHPIRHRG");
+viko2 = new viking('Davi',20,10, "AHIHOIHGRHPIOHWE");
 viko3 = new viking('Fer',100,5, "GEMIDOOOOOO!!!!!");
 pobre_diablo = new saxon();
 pobre_diablo2 = new saxon();
@@ -105,6 +106,7 @@ pobre_diablo9 = new saxon();
 pobre_diablo10 = new saxon();
 
 var viking_array = [vik,viko,viko2,viko3];
-var saxon_array = [pobre_diablo,pobre_diablo2,pobre_diablo8,pobre_diablo4,pobre_diablo10];
+var saxon_array = [pobre_diablo,pobre_diablo2,pobre_diablo8,pobre_diablo4,pobre_diablo10,
+										pobre_diablo10,pobre_diablo10,pobre_diablo10,pobre_diablo10,pobre_diablo10,pobre_diablo10,pobre_diablo10,pobre_diablo10];
 
 battle(saxon_array, viking_array);
